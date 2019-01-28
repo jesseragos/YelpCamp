@@ -24,8 +24,9 @@ var commentRoutes       = require("./routes/comments"),
 // Connect/Create yelp_camp db 
 // mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true });
 // mongoose.connect("mongodb://jkieluser1:jkielpword1@ds013014.mlab.com:13014/yelpcamp_jkiel9", { useNewUrlParser: true });
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
-console.log("DB in use: " + process.env.DATABASEURL);
+var dbUrl = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+mongoose.connect(dbUrl, { useNewUrlParser: true });
+console.log("DB in use: " + dbUrl);
 /*
     =====================
     EXPRESS SETUP
