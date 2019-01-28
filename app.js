@@ -22,7 +22,8 @@ var commentRoutes       = require("./routes/comments"),
 // seedDB();
 
 // Connect/Create yelp_camp db 
-mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true });
+mongoose.connect("mongodb://jkieluser1:jkielpword1@ds013014.mlab.com:13014/yelpcamp_jkiel9", { useNewUrlParser: true });
 
 /*
     =====================
